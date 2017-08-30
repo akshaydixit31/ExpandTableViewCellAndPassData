@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExpandTableViewCellAndPassData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-Ej-lk1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpendedCell" rowHeight="72" id="Npm-0I-vx3" customClass="ExpendedCell" customModule="ExpandTableViewCellAndPassData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Npm-0I-vx3" id="EhT-2w-i0m">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAN-sT-G6h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                                    <color key="backgroundColor" red="0.70591905381944442" green="0.62120994594444445" blue="0.59950855705555561" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="expendedButtonOnCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNg-iO-90B"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q3L-yt-KID">
+                                                    <rect key="frame" x="300" y="15" width="45" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="pmo-9S-d4z"/>
+                                                        <constraint firstAttribute="height" constant="45" id="psO-OJ-2L0"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lAN-sT-G6h" firstAttribute="top" secondItem="EhT-2w-i0m" secondAttribute="top" id="O6k-Dd-Ipe"/>
+                                                <constraint firstAttribute="trailing" secondItem="lAN-sT-G6h" secondAttribute="trailing" id="SBx-SR-xVw"/>
+                                                <constraint firstItem="Q3L-yt-KID" firstAttribute="top" secondItem="EhT-2w-i0m" secondAttribute="top" constant="15" id="bf3-yd-i92"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q3L-yt-KID" secondAttribute="trailing" constant="30" id="h7E-uS-DfP"/>
+                                                <constraint firstAttribute="bottom" secondItem="lAN-sT-G6h" secondAttribute="bottom" id="qJA-kt-Tjc"/>
+                                                <constraint firstItem="lAN-sT-G6h" firstAttribute="leading" secondItem="EhT-2w-i0m" secondAttribute="leading" id="sRc-v3-i0Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="expendedButtonOnCell" destination="lAN-sT-G6h" id="zA4-eM-ZGr"/>
+                                            <outlet property="imageOnButton" destination="Q3L-yt-KID" id="6nx-1m-vov"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vcf-Ej-lk1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K5Q-gn-PqV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vcf-Ej-lk1" secondAttribute="trailing" id="SJm-Eu-rQt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vcf-Ej-lk1" secondAttribute="bottom" id="X02-8p-bWz"/>
+                            <constraint firstItem="Vcf-Ej-lk1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fen-eQ-DPV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="expendedTableView" destination="Vcf-Ej-lk1" id="C5v-vF-5ox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1465" y="-243"/>
+        </scene>
+    </scenes>
+</document>
