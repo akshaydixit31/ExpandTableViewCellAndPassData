@@ -34,12 +34,15 @@ class ViewController: UIViewController {
         print(section)
         let shouldExpand = !expandedSections.contains(section)
         if (shouldExpand) {
-            expandedSections.removeAllObjects()
+//            expandedSections.removeAllObjects()
+            expandedSections.remove(section)
             expandedSections.add(section)
         } else {
-            expandedSections.removeAllObjects()
+            expandedSections.remove(section)
         }
-        self.expendedTableView.reloadData()
+        self.expendedTableView.reloadSections([section], with: .automatic)
+        
+        
     }
     
 }
